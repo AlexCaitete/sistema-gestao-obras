@@ -133,39 +133,58 @@
             </div>
         </section>
 
-        <section class="s-curve-section">
-            <div class="section-header-row">
-                <div>
-                    <h3>Curva S - Análise de Performance</h3>
-                    <p class="section-subtitle-text">Comparativo entre planejado e executado</p>
-                </div>
-                <div class="deviation-badge">⚠️ Desvio: -8%</div>
-            </div>
+        <!-- SUBSTITUA O SEU CARD DA CURVA S POR ESTE BLOCO -->
+<div class="s-curve-card">
+    
+    <div class="s-curve-header">
+        <div>
+            <h3 class="section-title" style="margin-bottom: 4px;">Curva S - Análise de Performance</h3>
+            <p class="section-subtitle">Comparativo entre planejado e executado</p>
+        </div>
+        <div class="warning-badge">
+            <span>⚠️</span> Desvio: -8%
+        </div>
+    </div>
 
-            <div class="chart-canvas-placeholder">
-                <div class="mock-chart-graphic">
-                    <div class="mock-line-planejado"><span>Planejado</span></div>
-                    <div class="mock-line-executado"><span>Executado</span></div>
-                </div>
-            </div>
+    <!-- O Segredo: a caixa delimitadora com overflow: hidden e o SVG -->
+    <div class="chart-container">
+        <svg viewBox="0 0 800 300" class="s-curve-svg">
+            
+            <!-- Eixos X e Y (As linhas de base do gráfico) -->
+            <line x1="40" y1="260" x2="760" y2="260" stroke="#e4e4e7" stroke-width="2" />
+            <line x1="40" y1="40" x2="40" y2="260" stroke="#e4e4e7" stroke-width="2" />
 
-            <div class="s-curve-footer-metrics">
-                <div class="metric-block">
-                    <p class="metric-label">Índice de Performance</p>
-                    <p class="metric-value">📈 0.92 SPI</p>
-                </div>
-                <div class="metric-block border-x">
-                    <p class="metric-label">Previsão de Conclusão</p>
-                    <p class="metric-value">+2 semanas</p>
-                </div>
-                <div class="metric-block">
-                    <p class="metric-label">Ação Recomendada</p>
-                    <p class="metric-value text-danger">Acelerar tarefas críticas</p>
-                </div>
-            </div>
-        </section>
+            <!-- Linha Planejada (Preta e tracejada) -->
+            <path d="M 40 260 C 300 260, 500 60, 760 60" fill="transparent" stroke="#000000" stroke-width="2" stroke-dasharray="6,6" />
+            <text x="700" y="45" font-size="12" fill="#000000" font-weight="600">Planejado</text>
+
+            <!-- Linha Executada (Dourada, caindo um pouco abaixo da preta) -->
+            <path d="M 40 260 C 250 260, 450 140, 600 160" fill="transparent" stroke="#D4AF37" stroke-width="3" />
+            <text x="610" y="165" font-size="12" fill="#b45309" font-weight="600">Executado</text>
+            
+        </svg>
+    </div>
+
+    <div class="s-curve-footer">
+        <div class="footer-stat">
+            <p class="stat-title">Índice de Performance</p>
+            <p class="stat-value">📉 0.92 SPI</p>
+        </div>
+        <div class="footer-stat border-sides">
+            <p class="stat-title">Previsão de Conclusão</p>
+            <p class="stat-value text-black">+2 semanas</p>
+        </div>
+        <div class="footer-stat">
+            <p class="stat-title">Ação Recomendada</p>
+            <p class="stat-value text-warning">Acelerar tarefas críticas</p>
+        </div>
+    </div>
+
+</div>
 
     </main>
-
+<div style="position: fixed; bottom: 32px; right: 32px; z-index: 1000;">
+        <a href="welcome.html" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: linear-gradient(135deg, #d4af37, #b8941f); border-radius: 50%; text-decoration: none; font-size: 24px; box-shadow: 0 10px 15px rgba(212, 175, 55, 0.3); transition: transform 0.2s;">🏠</a>
+    </div>
 </body>
 </html>
