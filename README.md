@@ -60,7 +60,3 @@ Padronização do espaçamento e grid das tabelas de Gantt e cards de aprovaçã
 Alex Roberto Alves Caitete - Desenvolvimento Front-end & Engenharia de Requisitos
 linkedin: https://www.linkedin.com/in/alex-roberto-alves-90b99a37b/
 link prototipo navegavel: : https://alexcaitete.github.io/sistema-gestao-obras/welcome.html
-
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/AlexCaitete/sistema-gestao-obras.git](https://github.com/AlexCaitete/sistema-gestao-obras.git)
