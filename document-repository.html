@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório de Plantas - Empresas Engenharia</title>
+    <link rel="stylesheet" href="document-repository.css">
+</head>
+<body>
+
+    <header class="repo-header">
+        <div class="header-content">
+            <div>
+                <span class="badge-module">Módulo Engenharia</span>
+                <h2 class="page-title">Repositório de Plantas e Projetos</h2>
+                <p class="page-subtitle">Controle automático de versão e distribuição de documentos técnicos</p>
+            </div>
+            <button class="btn-primary">
+                <span class="icon">☁️</span> Fazer Upload de Revisão
+            </button>
+        </div>
+    </header>
+
+    <main class="repo-main">
+
+        <section class="upload-zone">
+            <div class="upload-border-dashed">
+                <div class="upload-icon">📄</div>
+                <h3>Arraste o novo projeto aqui</h3>
+                <p>O sistema identificará automaticamente a disciplina e atualizará a versão do arquivo (PDF, DWG, RVT)</p>
+                <span class="upload-btn-fake">Ou clique para procurar no computador</span>
+            </div>
+        </section>
+
+        <section class="documents-section">
+            <h3 class="section-title">Projetos Vigentes (Última Revisão)</h3>
+            
+            <div class="docs-grid">
+
+                <div class="doc-card">
+                    <div class="doc-header">
+                        <div class="doc-title-area">
+                            <span class="doc-icon arch-icon">📐</span>
+                            <div>
+                                <h4>Projeto Arquitetônico - Pavimento Tipo</h4>
+                                <p class="doc-id">ARQ-PAV01-2026</p>
+                            </div>
+                        </div>
+                        <span class="badge-valid">✓ Vigente</span>
+                    </div>
+
+                    <div class="doc-body">
+                        <div class="version-highlight">
+                            <span class="version-label">Versão Atual</span>
+                            <span class="version-number">Rev. 03</span>
+                        </div>
+                        <div class="doc-meta">
+                            <p><strong>Atualizado por:</strong> Eng. Carlos Silva</p>
+                            <p><strong>Data:</strong> 28/05/2026 às 14:30</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-footer">
+                        <button class="btn-action btn-view">👁️ Visualizar Planta</button>
+                        <button class="btn-action btn-history">⏱️ Histórico (2 antigas)</button>
+                    </div>
+                </div>
+
+                <div class="doc-card">
+                    <div class="doc-header">
+                        <div class="doc-title-area">
+                            <span class="doc-icon eng-icon">🏗️</span>
+                            <div>
+                                <h4>Projeto Estrutural - Lajes e Vigas</h4>
+                                <p class="doc-id">EST-LJV-2026</p>
+                            </div>
+                        </div>
+                        <span class="badge-valid">✓ Vigente</span>
+                    </div>
+
+                    <div class="doc-body">
+                        <div class="version-highlight">
+                            <span class="version-label">Versão Atual</span>
+                            <span class="version-number">Rev. 01</span>
+                        </div>
+                        <div class="doc-meta">
+                            <p><strong>Atualizado por:</strong> Eng. Roberto Alves</p>
+                            <p><strong>Data:</strong> 15/05/2026 às 09:15</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-footer">
+                        <button class="btn-action btn-view">👁️ Visualizar Planta</button>
+                        <button class="btn-action btn-history disabled">⏱️ Histórico (Nenhuma)</button>
+                    </div>
+                </div>
+
+                <div class="doc-card history-open">
+                    <div class="doc-header">
+                        <div class="doc-title-area">
+                            <span class="doc-icon elec-icon">⚡</span>
+                            <div>
+                                <h4>Projeto Elétrico - Térreo</h4>
+                                <p class="doc-id">ELE-TER-2026</p>
+                            </div>
+                        </div>
+                        <span class="badge-valid">✓ Vigente</span>
+                    </div>
+
+                    <div class="doc-body">
+                        <div class="version-highlight">
+                            <span class="version-label">Versão Atual</span>
+                            <span class="version-number">Rev. 02</span>
+                        </div>
+                    </div>
+
+                    <div class="history-dropdown">
+                        <div class="history-item obsolete">
+                            <div class="hist-info">
+                                <span class="badge-obsolete">⚠ Obsoleto</span>
+                                <span class="hist-rev">Rev. 01</span>
+                            </div>
+                            <p class="hist-date">Substituído em 20/05/2026</p>
+                        </div>
+                    </div>
+
+                    <div class="doc-footer">
+                        <button class="btn-action btn-view">👁️ Visualizar Planta</button>
+                        <button class="btn-action btn-history active">⏱️ Ocultar Histórico</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div style="position: fixed; bottom: 32px; right: 32px; z-index: 1000;">
+        <a href="welcome.html" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: linear-gradient(135deg, #d4af37, #b8941f); border-radius: 50%; text-decoration: none; font-size: 24px; box-shadow: 0 10px 15px rgba(212, 175, 55, 0.3); transition: transform 0.2s;">🏠</a>
+    </div>
+
+</body>
+</html>
