@@ -1,0 +1,191 @@
+:root {
+  /* Cores Principais da Marca (Dourado/Gold) */
+  --primary-gold: #d4af37;
+  --primary-gold-dark: #b8941f;
+  --primary-gold-light: rgba(212, 175, 55, 0.1);
+
+  /* Cores de Fundo (Grays/White) */
+  --bg-main: #f4f4f5;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #fafafa;
+
+  /* Bordas e Divisórias */
+  --border-color: #e4e4e7;
+
+  /* Cores de Texto */
+  --text-primary: #000000;
+  --text-secondary: #3f3f46;
+  --text-muted: #52525b;
+  --text-light: #71717a;
+
+  /* Cores de Status e Módulos */
+  --status-success: #10b981;
+  --status-success-bg: #f0fdf4;
+
+  --status-warning: #ea580c;
+  --status-warning-bg: #ffedd5;
+
+  --status-error: #ef4444;
+  --status-error-dark: #dc2626;
+  --status-error-bg: #fee2e2;
+
+  --status-info: #3b82f6;
+  --status-info-bg: #eff6ff;
+
+  --status-module: #8b5cf6;
+  --status-module-bg: #f5f3ff;
+
+  /* Tipografia Padrão */
+  --font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Limpeza Padrão e Reset (Aplicado a todo o projeto) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* --- BOTÃO FLUTUANTE DE VOLTAR (UTILITY) --- */
+.floating-home-container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1000;
+}
+
+.btn-floating-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-gold),
+    var(--primary-gold-dark)
+  );
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 10px 15px rgba(212, 175, 55, 0.3);
+  transition: transform 0.2s;
+}
+
+.btn-floating-home:hover {
+  transform: scale(1.1);
+}
+
+/* --- BADGES (UTILITY) --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.badge-md {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.badge-sm {
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+.badge-green {
+  background-color: var(--status-success-bg);
+  color: #065f46;
+  border-color: #bbf7d0;
+}
+
+.badge-warning {
+  background-color: var(--status-warning-bg);
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+.badge-red {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-dark);
+  border-color: #fecaca;
+}
+
+.badge-blue {
+  background-color: var(--status-info-bg);
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.badge-violet {
+  background-color: var(--status-module-bg);
+  color: #6d28d9;
+  border-color: #ddd6fe;
+}
+
+.badge-amber {
+  background-color: #fffbeb;
+  color: #b45309;
+  border-color: #fde68a;
+}
+
+.badge-cyan {
+  background-color: #ecfeff;
+  color: #0e7490;
+  border-color: #cffafe;
+}
+
+.badge-gray {
+  background-color: #f4f4f5;
+  color: #3f3f46;
+  border-color: #e4e4e7;
+}
+
+/* --- ESPAÇAMENTOS (UTILITY) --- */
+.mb-2 {
+  margin-bottom: 8px;
+}
+.mb-3 {
+  margin-bottom: 12px;
+}
+
+/* --- CORES DE TEXTO (UTILITY) --- */
+.text-black {
+  color: #000000 !important;
+}
+.text-gold {
+  color: var(--primary-gold) !important;
+}
+.text-green {
+  color: #16a34a !important;
+}
+.text-emerald {
+  color: #059669 !important;
+}
+.text-red {
+  color: var(--status-error-dark) !important;
+}
+.text-danger {
+  color: var(--status-error-dark) !important;
+}
+.text-warning {
+  color: var(--status-warning) !important;
+}
+.text-orange {
+  color: var(--status-warning) !important;
+}
+.text-amber {
+  color: #b45309 !important;
+}

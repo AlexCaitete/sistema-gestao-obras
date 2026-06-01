@@ -1,16 +1,3 @@
-/* Limpeza Padrão e Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
-  padding: 48px 24px;
-}
-
 /* Container de alinhamento dos exemplos */
 .cards-preview-container {
   max-width: 1200px;
@@ -80,26 +67,6 @@ body {
 .client-info .icon {
   font-size: 14px;
   color: #a1a1aa;
-}
-
-/* Badges Dinâmicos de Fases */
-.phase-badge {
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.badge-amber {
-  background-color: #fef3c7;
-  color: #b45309;
-  border: 1px solid #fde68a;
-}
-.badge-orange {
-  background-color: #ffedd5;
-  color: #ea580c;
-  border: 1px solid #fed7aa;
 }
 
 /* Corpo e Informações de Progresso */

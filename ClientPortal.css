@@ -1,15 +1,3 @@
-/* Configurações globais para limpar o comportamento padrão do navegador */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
-}
-
 /* Estilização do Header */
 .main-header {
   background-color: rgba(255, 255, 255, 0.8);
@@ -555,16 +543,6 @@ body {
 .delay-title-area p {
   font-size: 14px;
   color: #71717a;
-}
-
-.status-approved-badge {
-  background-color: #ecfdf5;
-  color: #047857;
-  font-weight: 600;
-  font-size: 14px;
-  padding: 8px 16px;
-  border-radius: 12px;
-  border: 1px solid #a7f3d0;
 }
 
 .delay-body-grid {

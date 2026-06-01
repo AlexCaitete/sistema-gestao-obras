@@ -1,15 +1,3 @@
-/* Limpeza Básica e Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
-}
-
 /* --- BACKDROP (FUNDO ESCURO) --- */
 .drawer-backdrop {
   position: fixed;
