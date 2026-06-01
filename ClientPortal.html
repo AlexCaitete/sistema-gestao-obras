@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal do Cliente - Empresas Engenharia</title>
     <link rel="stylesheet" href="ClientPortal.css">
 </head>
+
 <body>
 
     <header class="main-header">
         <div class="header-container">
             <div class="brand-info">
                 <div class="logo-box">
-                    <span class="logo-icon">🏢</span> 
+                    <span class="logo-icon">🏢</span>
                 </div>
                 <div class="brand-text">
                     <h1 class="company-name">Empresas Engenharia Ltda</h1>
@@ -20,14 +22,61 @@
                 </div>
             </div>
 
-            <div class="secure-badge">
-                <span class="badge-icon">🛡️</span>
-                <div class="badge-text">
-                    <p class="badge-title">Acesso Seguro</p>
-                    <p class="badge-status">Cliente Verificado</p>
+            <div class="header-actions">
+
+                <div class="notification-wrapper">
+                    <button class="btn-notification">
+                        🔔 <span class="notif-badge">3</span>
+                    </button>
+
+                    <div class="notif-dropdown">
+                        <div class="notif-header">
+                            <h4>Notificações Recentes</h4>
+                            <span class="mark-read">Marcar como lidas</span>
+                        </div>
+                        <div class="notif-list">
+
+                            <div class="notif-item unread">
+                                <span class="notif-icon bg-gold">🏆</span>
+                                <div class="notif-text">
+                                    <p><strong>Marco Atingido:</strong> Etapa de Fundação foi 100% concluída!</p>
+                                    <span class="notif-time">Há 2 horas</span>
+                                </div>
+                            </div>
+
+                            <div class="notif-item unread">
+                                <span class="notif-icon bg-blue">📅</span>
+                                <div class="notif-text">
+                                    <p><strong>Ajuste de Cronograma:</strong> Nova data aprovada para Instalações
+                                        Elétricas (19/06).</p>
+                                    <span class="notif-time">Ontem, 15:30</span>
+                                </div>
+                            </div>
+
+                            <div class="notif-item">
+                                <span class="notif-icon bg-green">📄</span>
+                                <div class="notif-text">
+                                    <p><strong>Novo Documento:</strong> Relatório fotográfico semanal liberado.</p>
+                                    <span class="notif-time">25/05/2026</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+                <div class="secure-badge">
+                    <span class="badge-icon">🛡️</span>
+                    <div class="badge-text">
+                        <p class="badge-title">Acesso Seguro</p>
+                        <p class="badge-status">Cliente Verificado</p>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </header>
+    </div>
     </header>
 
     <main class="main-content">
@@ -60,7 +109,7 @@
 
         <section class="timeline-section">
             <h3 class="section-title">Linha do Tempo - Fases do Projeto</h3>
-            
+
             <div class="timeline-wrapper">
                 <div class="timeline-line"></div>
 
@@ -220,13 +269,15 @@
                     <div class="delay-body-grid">
                         <div class="delay-body-left">
                             <span class="info-label">Motivo</span>
-                            <p class="info-text">Condições climáticas adversas (chuvas intensas por 7 dias consecutivos)</p>
+                            <p class="info-text">Condições climáticas adversas (chuvas intensas por 7 dias consecutivos)
+                            </p>
                             <span class="info-label">Impacto</span>
                             <p class="info-text">Atraso de 5 dias úteis na concretagem</p>
                         </div>
                         <div class="delay-body-right">
                             <span class="info-label">Plano de Mitigação</span>
-                            <p class="info-text">Mobilização de equipes adicionais para recuperação do tempo. Trabalho em regime estendido nas próximas 2 semanas com equipes de reforço.</p>
+                            <p class="info-text">Mobilização de equipes adicionais para recuperação do tempo. Trabalho
+                                em regime estendido nas próximas 2 semanas com equipes de reforço.</p>
                             <div class="approval-footer">
                                 <div>
                                     <span class="info-label">Aprovado por</span>
@@ -253,13 +304,15 @@
                     <div class="delay-body-grid">
                         <div class="delay-body-left">
                             <span class="info-label">Motivo</span>
-                            <p class="info-text">Atraso na entrega de materiais importados (transformadores especiais)</p>
+                            <p class="info-text">Atraso na entrega de materiais importados (transformadores especiais)
+                            </p>
                             <span class="info-label">Impacto</span>
                             <p class="info-text">Postergação de 3 dias no início da fase</p>
                         </div>
                         <div class="delay-body-right">
                             <span class="info-label">Plano de Mitigação</span>
-                            <p class="info-text">Fornecedor alternativo identificado para próximas entregas. Material recebido e instalação iniciada com prioridade máxima.</p>
+                            <p class="info-text">Fornecedor alternativo identificado para próximas entregas. Material
+                                recebido e instalação iniciada com prioridade máxima.</p>
                             <div class="approval-footer">
                                 <div>
                                     <span class="info-label">Aprovado por</span>
@@ -289,8 +342,10 @@
     </footer>
 
     <div style="position: fixed; bottom: 32px; right: 32px; z-index: 1000;">
-        <a href="welcome.html" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: linear-gradient(135deg, #d4af37, #b8941f); border-radius: 50%; text-decoration: none; font-size: 24px; box-shadow: 0 10px 15px rgba(212, 175, 55, 0.3); transition: transform 0.2s;">🏠</a>
+        <a href="welcome.html"
+            style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: linear-gradient(135deg, #d4af37, #b8941f); border-radius: 50%; text-decoration: none; font-size: 24px; box-shadow: 0 10px 15px rgba(212, 175, 55, 0.3); transition: transform 0.2s;">🏠</a>
     </div>
 
 </body>
+
 </html>
