@@ -1,0 +1,421 @@
+/* Limpeza Básica e Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
+  color: #000000;
+}
+
+/* --- HEADER PRINCIPAL --- */
+.schedule-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e4e7;
+  padding: 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge-module {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.page-subtitle {
+  font-size: 14px;
+  color: #52525b;
+}
+
+.header-actions-area {
+  display: flex;
+  gap: 12px;
+}
+
+.time-badge {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.btn-dropdown {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f3f46;
+  cursor: pointer;
+}
+
+/* --- ÁREA DO CONTEÚDO --- */
+.schedule-main {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header-row h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.section-subtitle-text {
+  font-size: 14px;
+  color: #52525b;
+}
+
+.btn-recalculate {
+  background: linear-gradient(90deg, #7c3aed, #6d28d9);
+  border: none;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.2);
+}
+
+/* Legenda do Gantt */
+.gantt-legend {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #52525b;
+  font-weight: 500;
+}
+
+.box-legend {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.bg-critical {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+.bg-normal {
+  background: linear-gradient(90deg, #d4af37, #b8941f);
+}
+
+/* --- GRÁFICO DE GANTT E TABELA --- */
+.gantt-card-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.gantt-scrollable {
+  overflow-x: auto;
+}
+
+.gantt-table {
+  min-width: 1100px;
+}
+
+.gantt-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.gantt-header-row {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.col-task-name {
+  width: 260px;
+  padding: 16px;
+  border-right: 1px solid #e4e4e7;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-weeks-timeline {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.week-cell {
+  flex: 1;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 11px;
+  color: #71717a;
+  font-weight: 500;
+  border-right: 1px solid #e4e4e7;
+}
+
+.col-progress-pct {
+  width: 80px;
+  text-align: center;
+  padding: 16px;
+  border-left: 1px solid #e4e4e7;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Container de preenchimento da Barra em CSS Grid de 25 divisões */
+.bar-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  padding: 0 4px;
+  align-items: center;
+}
+
+.gantt-bar {
+  height: 32px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gantt-bar.critical {
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  border: 1px solid #f87171;
+}
+.gantt-bar.normal {
+  background: linear-gradient(90deg, #d4af37, #b8941f);
+  border: 1px solid #fbbf24;
+}
+
+.bar-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Transparência simulando a cobertura de progresso */
+}
+
+.font-medium {
+  font-weight: 500;
+}
+.text-emerald {
+  color: #059669;
+}
+.text-amber {
+  color: #b45309;
+}
+.text-orange {
+  color: #ea580c;
+}
+
+/* MINI KPIS INFERIORES */
+.stats-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1024px) {
+  .stats-kpi-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mini-kpi-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.mini-kpi-card.border-red {
+  border-color: #fca5a5;
+}
+
+.mini-kpi-label {
+  font-size: 12px;
+  color: #52525b;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.mini-kpi-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+.text-red {
+  color: #dc2626;
+}
+.text-gold {
+  color: #d4af37;
+}
+
+/* --- SEÇÃO DE ANÁLISE DE PERFORMANCE (CURVA S) --- */
+.s-curve-section {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.deviation-badge {
+  background-color: #fff7ed;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 12px;
+}
+
+/* Placeholder do Painel do Gráfico Recharts */
+.chart-canvas-placeholder {
+  width: 100%;
+  height: 350px;
+  background-color: #fafafa;
+  border: 1px dashed #e4e4e7;
+  border-radius: 12px;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mock-chart-graphic {
+  width: 80%;
+  height: 150px;
+  position: relative;
+  border-left: 2px solid #a1a1aa;
+  border-bottom: 2px solid #a1a1aa;
+}
+
+/* Representação em CSS da Curva S Sincronizada */
+.mock-line-planejado,
+.mock-line-executado {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 80%;
+}
+
+.mock-line-planejado {
+  border-right: 4px solid #0a0a0a;
+  transform: skewY(15deg);
+}
+
+.mock-line-planejado span {
+  position: absolute;
+  right: 10px;
+  top: -24px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+.mock-line-executado {
+  border-right: 4px solid #d4af37;
+  transform: skewY(22deg);
+}
+
+.mock-line-executado span {
+  position: absolute;
+  right: 70px;
+  top: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+/* Métricas de Rodapé Analítico */
+.s-curve-footer-metrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  border-top: 1px solid #e4e4e7;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .s-curve-footer-metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.metric-block {
+  text-align: center;
+}
+
+.metric-block.border-x {
+  border-left: 1px solid #e4e4e7;
+  border-right: 1px solid #e4e4e7;
+}
+
+@media (max-width: 767px) {
+  .metric-block.border-x {
+    border: none;
+    padding: 12px 0;
+    border-top: 1px solid #e4e4e7;
+    border-bottom: 1px solid #e4e4e7;
+  }
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #52525b;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+}
+.text-danger {
+  color: #ea580c;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Campo - Relatório Diário</title>
+    <link rel="stylesheet" href="engineer-panel.css">
+</head>
+<body>
+
+    <header class="panel-header">
+        <div class="header-container">
+            <div class="brand-area">
+                <div class="logo-box">EE</div>
+                <div>
+                    <h3>Empresas Engenharia Ltda</h3>
+                    <p class="sub-text">Painel de Campo</p>
+                </div>
+            </div>
+
+            <div class="user-area">
+                <button class="btn-notification">
+                    🔔 <span class="notification-dot"></span>
+                </button>
+                <div class="profile-divider"></div>
+                <div class="profile-info">
+                    <p class="profile-name">Ana Costa</p>
+                    <p class="profile-role">Engenheira de Campo</p>
+                </div>
+                <div class="profile-avatar">AC</div>
+                <span class="chevron-down">▼</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="panel-main">
+        
+        <section class="page-header">
+            <span class="badge-module">Módulo Engenheiro</span>
+            <h2 class="page-title">📝 Painel de Campo - Relatório Diário</h2>
+            <p class="page-subtitle">Registro de atividades e condições de campo</p>
+        </section>
+
+        <div class="form-card">
+            <form>
+                
+                <div class="info-grid">
+                    <div class="form-group">
+                        <label for="date" class="form-label">Data</label>
+                        <div class="input-icon-wrapper">
+                            <span class="input-icon">📅</span>
+                            <input type="date" id="date" class="form-input icon-padding">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Clima (Manhã)</label>
+                        <div class="input-icon-wrapper">
+                            <span class="input-icon">☀️</span>
+                            <input type="text" value="Ensolarado" readonly class="form-input icon-padding readonly-input">
+                            <span class="api-tag">API</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="block-label">Clima (Tarde)</label>
+                        <div class="input-icon-wrapper">
+                            <span class="input-icon">☁️</span>
+                            <input type="text" value="Parcialmente Nublado" readonly class="form-input icon-padding readonly-input">
+                            <span class="api-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mt-6">
+                    <label for="workforce" class="form-label">Efetivo de Mão de Obra</label>
+                    <input type="number" id="workforce" value="45" min="0" class="form-input input-number">
+                    <p class="input-tip">Número de trabalhadores presentes no dia</p>
+                </div>
+
+                <div class="form-group mt-6">
+                    <label for="activity" class="form-label">Relatório de Atividades</label>
+                    <div class="rich-editor">
+                        <div class="editor-toolbar">
+                            <button type="button" class="toolbar-btn" title="Negrito"><b>B</b></button>
+                            <button type="button" class="toolbar-btn" title="Itálico"><i>I</i></button>
+                            <button type="button" class="toolbar-btn" title="Sublinhado"><u>U</u></button>
+                            <div class="toolbar-divider"></div>
+                            <button type="button" class="toolbar-btn" title="Lista">≡</button>
+                            <button type="button" class="toolbar-btn" title="Lista Numerada">1.</button>
+                        </div>
+                        <textarea id="activity" rows="8" class="editor-textarea" placeholder="Descreva as atividades realizadas, progressos, observações e ocorrências do dia..."></textarea>
+                    </div>
+                </div>
+
+                <div class="photo-section">
+                    <h4 class="photo-title">Evidência Fotográfica</h4>
+                    
+                    <div class="upload-buttons-grid">
+                        <button type="button" class="upload-zone-btn">
+                            <span class="upload-icon">📤</span>
+                            <div class="upload-text">
+                                <p class="upload-main-text">Upload de Imagens</p>
+                                <p class="upload-sub-text">JPG, PNG até 10MB</p>
+                            </div>
+                        </button>
+
+                        <button type="button" class="upload-zone-btn">
+                            <span class="upload-icon">📷</span>
+                            <div class="upload-text">
+                                <p class="upload-main-text">Capturar Foto</p>
+                                <p class="upload-sub-text">Usar câmera</p>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="uploaded-photos-grid">
+                        <div class="photo-preview-card">
+                            <div class="photo-img-placeholder">🖼️</div>
+                            <div class="photo-card-footer"><p>photo-1.jpg</p></div>
+                        </div>
+                        <div class="photo-preview-card">
+                            <div class="photo-img-placeholder">🖼️</div>
+                            <div class="photo-card-footer"><p>photo-2.jpg</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions-footer">
+                    <button type="button" class="btn-crisis-report">
+                        ⚠️ Reportar Gestão de Crise
+                    </button>
+
+                    <div class="right-buttons">
+                        <button type="button" class="btn-cancel">Cancelar</button>
+                        <button type="submit" class="btn-save-report">💾 Salvar Relatório</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>

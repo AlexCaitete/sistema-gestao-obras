@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente - Gestão de Crise</title>
+    <link rel="stylesheet" href="crisis-modal.css">
+</head>
+<body>
+
+    <div class="modal-overlay">
+        
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <div class="modal-title-wrapper">
+                    <div class="alert-icon-box">⚠️</div>
+                    <div>
+                        <h3 class="modal-title">Gestão de Crise</h3>
+                        <p class="modal-subtitle">Registro de atraso e plano de ação corretiva</p>
+                    </div>
+                </div>
+                <button class="btn-close-modal">✕</button>
+            </div>
+
+            <div class="alert-banner">
+                <p>⚠️ Este formulário é obrigatório quando há desvios no cronograma. Todos os campos devem ser preenchidos antes de continuar.</p>
+            </div>
+
+            <form class="modal-form">
+                
+                <div class="form-group">
+                    <label for="delay-reason" class="form-label">Motivo do Atraso <span class="required">*</span></label>
+                    <select id="delay-reason" required class="form-input">
+                        <option value="">Selecione o motivo...</option>
+                        <option value="weather">Condições Climáticas Adversas</option>
+                        <option value="logistics">Problemas Logísticos</option>
+                        <option value="tech">Questões Técnicas</option>
+                        <option value="materials">Falta de Materiais</option>
+                        <option value="equipment">Falha de Equipamento</option>
+                        <option value="workforce">Falta de Mão de Obra</option>
+                        <option value="other">Outros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="action-plan" class="form-label">Plano de Ação Corretiva <span class="required">*</span></label>
+                    <textarea id="action-plan" required rows="5" class="form-input textarea-input" placeholder="Descreva detalhadamente as ações que serão tomadas para mitigar o atraso e retornar ao cronograma..."></textarea>
+                    <p class="input-tip">Inclua prazos, responsáveis e recursos necessários</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="new-date" class="form-label">Nova Data Sugerida <span class="required">*</span></label>
+                    <div class="date-input-wrapper">
+                        <span class="calendar-icon">📅</span>
+                        <input type="date" id="new-date" required class="form-input date-input">
+                    </div>
+                    <p class="input-tip">Data estimada para conclusão considerando as ações corretivas</p>
+                </div>
+
+                <div class="impact-box">
+                    <h4 class="impact-title">Avaliação de Impacto</h4>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox"> <span>Impacto no cronograma geral</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> <span>Impacto financeiro/orçamentário</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> <span>Requer aprovação da gestão</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-submit">Confirmar Registro de Crise</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

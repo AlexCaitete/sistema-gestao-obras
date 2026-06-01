@@ -1,0 +1,508 @@
+/* Limpeza Padrão e Configuração Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
+  color: #000000;
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+.panel-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e4e7;
+  padding: 16px 32px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-box {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+}
+
+.brand-area h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sub-text {
+  font-size: 12px;
+  color: #71717a;
+}
+
+/* Área do Perfil */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-notification {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-notification:hover {
+  background-color: #f4f4f5;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444; /* Vermelho para Ana Costa */
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.profile-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e4e4e7;
+  margin: 0 8px;
+}
+
+.profile-info {
+  text-align: right;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #71717a;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    #10b981,
+    #059669
+  ); /* Verde para a Engenharia */
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
+
+.chevron-down {
+  font-size: 10px;
+  color: #a1a1aa;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.panel-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.badge-module {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  font-size: 14px;
+  color: #52525b;
+}
+
+/* CARD DO FORMULÁRIO */
+.form-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.mt-6 {
+  margin-top: 24px;
+}
+
+/* Grid de 3 Colunas */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #3f3f46;
+  margin-bottom: 8px;
+}
+
+.input-icon-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.form-input {
+  width: 100%;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #000000;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+  background-color: #ffffff;
+}
+
+.icon-padding {
+  padding-left: 48px;
+}
+
+.readonly-input {
+  color: #52525b;
+  cursor: not-allowed;
+}
+
+.api-tag {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  color: #b45309;
+  background-color: #fef3c7;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.input-number {
+  max-width: 260px;
+}
+
+.input-tip {
+  font-size: 12px;
+  color: #71717a;
+  margin-top: 8px;
+}
+
+/* --- RICH TEXT EDITOR SIMULADO --- */
+.rich-editor {
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.rich-editor:focus-within {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+  background-color: #ffffff;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.toolbar-btn {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #52525b;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toolbar-btn:hover {
+  background-color: #f4f4f5;
+  color: #000000;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #e4e4e7;
+  margin: 0 4px;
+}
+
+.editor-textarea {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #000000;
+  resize: none;
+}
+
+/* --- SEÇÃO DE FOTOS --- */
+.photo-section {
+  border-top: 1px solid #e4e4e7;
+  padding-top: 24px;
+  margin-top: 32px;
+}
+
+.photo-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.upload-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .upload-buttons-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.upload-zone-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #fafafa;
+  border: 2px dashed #e4e4e7;
+  border-radius: 12px;
+  padding: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.upload-zone-btn:hover {
+  border-color: #d4af37;
+  background-color: #fffbeb;
+}
+
+.upload-icon {
+  font-size: 24px;
+}
+
+.upload-text {
+  text-align: left;
+}
+
+.upload-main-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.upload-sub-text {
+  font-size: 12px;
+  color: #71717a;
+}
+
+/* Grade de Exibição das Fotos Upadas */
+.uploaded-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .uploaded-photos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.photo-preview-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background-color: #f4f4f5;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.photo-img-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #cbd5e1;
+}
+
+.photo-card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding: 8px;
+}
+
+.photo-card-footer p {
+  color: #ffffff;
+  font-size: 11px;
+}
+
+/* --- BOTÕES DO RODAPÉ --- */
+.form-actions-footer {
+  border-top: 1px solid #e4e4e7;
+  padding-top: 24px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .form-actions-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.btn-crisis-report {
+  padding: 12px 24px;
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-crisis-report:hover {
+  background-color: #fee2e2;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.btn-cancel {
+  padding: 12px 24px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  color: #3f3f46;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #fafafa;
+}
+
+.btn-save-report {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border: none;
+  color: #000000;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.btn-save-report:hover {
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.25);
+}

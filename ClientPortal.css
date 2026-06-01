@@ -1,0 +1,671 @@
+/* Configurações globais para limpar o comportamento padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f5; /* Um fundo cinza bem claro para destacar os cards */
+}
+
+/* Estilização do Header */
+.main-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px); /* Efeito de vidro escovado */
+  border-b: 1px solid #e4e4e7;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 24px 0;
+}
+
+/* Container que centraliza o conteúdo do topo na tela */
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Lado esquerdo (Logo + Textos) */
+.brand-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* O quadrado dourado do Logo */
+.logo-box {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.2);
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.company-name {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.portal-sub {
+  color: #52525b;
+  font-size: 14px;
+}
+
+/* Lado direito (Badge de segurança verde) */
+.secure-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+}
+
+.badge-icon {
+  font-size: 20px;
+}
+
+.badge-title {
+  color: #059669;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-status {
+  color: #047857;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* Área Principal */
+.main-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 32px;
+}
+
+/* Seção de Introdução */
+.project-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.badge-client {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.project-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.project-subtitle {
+  color: #52525b;
+  font-size: 16px;
+}
+
+/* Card de Progresso Centrado */
+.progress-card {
+  max-width: 768px;
+  margin: 0 auto 48px auto; /* Centraliza horizontalmente */
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.progress-title-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trending-icon-box {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.progress-title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.progress-percentage {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Customização da Barra de Progresso */
+.progress-bar-bg {
+  width: 100%;
+  height: 20px;
+  background-color: #f4f4f5;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  /* Gradiente dourado lindo puxado do seu protótipo */
+  background: linear-gradient(90deg, #d4af37, #ffd700, #b8941f);
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.4);
+  transition: width 0.5s ease-in-out;
+}
+
+/* Rodapé do Card */
+.progress-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-info {
+  color: #52525b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status-badge {
+  background-color: #ecfdf5;
+  color: #065f46;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+/* Títulos das Seções */
+.section-title {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* Container da Timeline */
+.timeline-section {
+  max-width: 1280px;
+  margin: 0 auto 48px auto;
+}
+
+.timeline-wrapper {
+  position: relative; /* Base para alinhar a linha interna */
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* A Linha Vertical de Fundo */
+.timeline-line {
+  position: absolute;
+  left: 54px; /* Alinha exatamente no centro dos ícones de 48px */
+  top: 40px;
+  bottom: 40px;
+  width: 4px;
+  /* Um gradiente que vai do verde (concluído) ao cinza (pendente) */
+  background: linear-gradient(to bottom, #10b981 40%, #d4af37 60%, #e4e4e7 90%);
+  border-radius: 9999px;
+}
+
+/* Item da Linha do Tempo */
+.timeline-item {
+  position: relative;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+/* Remove a margem do último item para não sobrar espaço */
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* O Círculo indicador de Status */
+.timeline-icon {
+  position: relative;
+  z-index: 10; /* Garante que a bolinha fique NA FRENTE da linha */
+  width: 48px;
+  height: 48px;
+  border-radius: 55px;
+  border: 4px solid #ffffff; /* Borda branca cria um corte visual na linha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Os Cards Laterais de Conteúdo */
+.timeline-content {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e4e4e7;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.content-header h4 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.phase-date {
+  font-size: 14px;
+  color: #52525b;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  color: #52525b;
+}
+
+/* --- Cores Customizadas por Status (Baseadas no seu Figma) --- */
+
+/* 1. Concluído (Verde) */
+.status-completed .timeline-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+}
+.status-completed .timeline-content {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+/* 2. Atual / Em andamento (Dourado/Amarelo) */
+.status-current .timeline-icon {
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  color: #000000;
+  /* Efeito de pulso discreto para chamar atenção para a fase atual */
+  animation: pulseEffect 2s infinite;
+}
+.status-current .timeline-content {
+  background-color: #fffbeb;
+  border-color: #fde68a;
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.1);
+}
+.status-current .content-header h4 {
+  color: #b45309;
+}
+
+/* 3. Pendente (Cinza) */
+.status-pending .timeline-icon {
+  background-color: #e4e4e7;
+}
+.status-pending .timeline-content {
+  background-color: #fafafa;
+  border-color: #e4e4e7;
+}
+.status-pending .timeline-content p,
+.status-pending .phase-date,
+.status-pending .content-header h4 {
+  color: #71717a;
+}
+
+/* Animação do Pulso */
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Configuração do Grid das Duas Colunas Principais */
+.two-columns-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Padrão: 1 coluna no celular */
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* Quando a tela for maior (computadores), divide em 2 colunas iguais */
+@media (min-width: 1024px) {
+  .two-columns-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Containers Brancos (Wrappers) */
+.occurrences-wrapper,
+.gallery-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* --- ESTILIZAÇÃO DAS OCORRÊNCIAS --- */
+.occ-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e4e4e7;
+  margin-bottom: 16px;
+}
+
+.occ-card:last-child {
+  margin-bottom: 0;
+}
+
+.occ-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.occ-text {
+  flex: 1;
+}
+
+.occ-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.occ-header h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.occ-date {
+  font-size: 12px;
+  color: #71717a;
+}
+
+.occ-text p {
+  font-size: 14px;
+  color: #52525b;
+}
+
+/* Cores específicas das ocorrências */
+.occ-success {
+  background-color: #f0fdf4;
+  border-color: #bbf7d0;
+}
+.occ-success .occ-icon {
+  background-color: #059669;
+}
+
+.occ-info {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+}
+.occ-info .occ-icon {
+  background-color: #2563eb;
+}
+
+.occ-warning {
+  background-color: #fff7ed;
+  border-color: #ffedd5;
+}
+.occ-warning .occ-icon {
+  background-color: #ea580c;
+}
+
+/* --- ESTILIZAÇÃO DA GALERIA --- */
+.photos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Sempre 2 colunas de fotos */
+  gap: 16px;
+}
+
+.photo-card {
+  position: relative;
+  aspect-ratio: 1 / 1; /* Força o card a ser um quadrado perfeito */
+  background: linear-gradient(135deg, #f4f4f5, #e4e4e7);
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.photo-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.15);
+}
+
+.photo-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #a1a1aa;
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 12px;
+}
+
+.photo-info p {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Botão de Ver Mais */
+.btn-gallery-more {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #fafafa;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  color: #3f3f46;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-gallery-more:hover {
+  background-color: #f4f4f5;
+  border-color: #d4af37;
+  color: #000000;
+}
+/* CONTAINER DE JUSTIFICATIVAS */
+.delays-section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.delays-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.delay-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Cabeçalho do Card */
+.delay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border-bottom: 1px solid #e4e4e7;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.delay-title-area h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.delay-title-area p {
+  font-size: 14px;
+  color: #71717a;
+}
+
+.status-approved-badge {
+  background-color: #ecfdf5;
+  color: #047857;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid #a7f3d0;
+}
+
+/* Grid Interno do Card */
+.delay-body-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .delay-body-grid {
+    grid-template-columns: 1fr 1fr; /* Duas colunas em telas médias/grandes */
+  }
+}
+
+/* Rótulos e Textos Internos */
+.info-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  tracking-width: 0.05em;
+  margin-bottom: 6px;
+}
+
+.info-text {
+  font-size: 14px;
+  color: #3f3f46;
+  margin-bottom: 16px;
+}
+
+.info-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Linha de Assinatura/Aprovação */
+.approval-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e4e4e7;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.approver-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* RODAPÉ DO SITE (FOOTER) */
+.main-footer {
+  border-top: 1px solid #e4e4e7;
+  padding: 32px 0;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.footer-secure-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footer-secure-info p {
+  font-size: 14px;
+  color: #52525b;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: #a1a1aa;
+}

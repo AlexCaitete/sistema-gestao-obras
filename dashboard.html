@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Gerencial - Construtora</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-gold">🏗️</span>
+                <h3>Gestão Obras</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">📊 Dashboard</a>
+                <a href="#" class="nav-item">🏢 Projetos</a>
+                <a href="#" class="nav-item">👥 Equipes</a>
+                <a href="#" class="nav-item">⚠️ Crises</a>
+            </nav>
+        </aside>
+
+        <div class="main-container">
+            
+            <header class="dashboard-header">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Buscar projetos, clientes...">
+                </div>
+
+                <div class="header-profile-area">
+                    <button class="btn-notification">
+                        🔔
+                        <span class="notification-badge"></span>
+                    </button>
+                    
+                    <div class="user-profile">
+                        <div class="user-text">
+                            <p class="user-name">Carlos Silva</p>
+                            <p class="user-role">Gerente de Projetos</p>
+                        </div>
+                        <div class="user-avatar">CS</div>
+                        <span class="chevron-icon">▼</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-main">
+                
+                <section class="page-intro">
+                    <span class="badge-module">Módulo Gerencial</span>
+                    <h2 class="page-title">Dashboard do Gerente</h2>
+                    <p class="page-subtitle">Visão geral dos projetos ativos</p>
+                </section>
+
+                <section class="filter-bar">
+                    <h3 class="section-title">Projetos Ativos</h3>
+                    <div class="filter-actions">
+                        <select class="filter-select">
+                            <option>Todos os Status</option>
+                            <option>Em Andamento</option>
+                            <option>Atrasados</option>
+                            <option>Concluídos</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>Ordenar: Progresso</option>
+                            <option>Ordenar: Data de Início</option>
+                            <option>Ordenar: Nome</option>
+                        </select>
+                    </div>
+                </section>
+
+                <section class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4 class="project-name">Edifício Residencial Portal das Flores</h4>
+                            <p class="project-client">Construtora Horizonte S.A.</p>
+                        </div>
+                        <div class="project-progress-wrapper">
+                            <div class="progress-text">
+                                <span>Progresso</span>
+                                <span class="font-bold">68%</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 68%;"></div></div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="phase-badge phase-amber">Estrutura</span>
+                            <span class="start-date">Início: 01/02/2026</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4 class="project-name">Shopping Center Norte</h4>
+                            <p class="project-client">Grupo Investimentos ABC</p>
+                        </div>
+                        <div class="project-progress-wrapper">
+                            <div class="progress-text">
+                                <span>Progresso</span>
+                                <span class="font-bold">42%</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 42%;"></div></div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="phase-badge phase-orange">Fundação</span>
+                            <span class="start-date">Início: 15/03/2026</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4 class="project-name">Complexo Industrial TechPark</h4>
+                            <p class="project-client">TechPark Empreendimentos</p>
+                        </div>
+                        <div class="project-progress-wrapper">
+                            <div class="progress-text">
+                                <span>Progresso</span>
+                                <span class="font-bold">89%</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 89%;"></div></div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="phase-badge phase-emerald">Acabamento</span>
+                            <span class="start-date">Início: 10/11/2025</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4 class="project-name">Ponte Rodoviária Sul</h4>
+                            <p class="project-client">Governo Estadual</p>
+                        </div>
+                        <div class="project-progress-wrapper">
+                            <div class="progress-text">
+                                <span>Progresso</span>
+                                <span class="font-bold">35%</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 35%;"></div></div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="phase-badge phase-violet">Planejamento</span>
+                            <span class="start-date">Início: 20/04/2026</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4 class="project-name">Condomínio Residencial Vila Verde</h4>
+                            <p class="project-client">Incorporadora Prime</p>
+                        </div>
+                        <div class="project-progress-wrapper">
+                            <div class="progress-text">
+                                <span>Progresso</span>
+                                <span class="font-bold">72%</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 72%;"></div></div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="phase-badge phase-cyan">Instalações</span>
+                            <span class="start-date">Início: 05/01/2026</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4 class="project-name">Estádio Municipal Renovação</h4>
+                            <p class="project-client">Prefeitura Municipal</p>
+                        </div>
+                        <div class="project-progress-wrapper">
+                            <div class="progress-text">
+                                <span>Progresso</span>
+                                <span class="font-bold">55%</span>
+                            </div>
+                            <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 55%;"></div></div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="phase-badge phase-amber">Estrutura</span>
+                            <span class="start-date">Início: 12/02/2026</span>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="kpi-grid">
+                    <div class="kpi-card">
+                        <p class="kpi-label">Total de Projetos</p>
+                        <p class="kpi-value">12</p>
+                        <span class="kpi-sub sub-green">+2 este mês</span>
+                    </div>
+                    <div class="kpi-card">
+                        <p class="kpi-label">Progresso Médio</p>
+                        <p class="kpi-value">60.2%</p>
+                        <span class="kpi-sub sub-gold">+5.3% este mês</span>
+                    </div>
+                    <div class="kpi-card">
+                        <p class="kpi-label">Equipes Ativas</p>
+                        <p class="kpi-value">8</p>
+                        <span class="kpi-sub sub-gray">3 projetos/equipe</span>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>

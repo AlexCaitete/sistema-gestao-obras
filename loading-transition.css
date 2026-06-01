@@ -1,0 +1,106 @@
+/* Limpeza Padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container Fixo cobrindo 100% da tela */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff; /* Fundo branco limpo igual ao seu design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-center-box {
+  text-align: center;
+}
+
+/* 1. O LOGO QUADRADO DOURADO (Com efeito Pulse) */
+.loading-logo-box {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.3);
+
+  /* Aplica a animação de pulsar */
+  animation: pulseAnimation 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.building-icon {
+  font-size: 32px;
+}
+
+/* 2. AS BOLINHAS DE CARREGAMENTO (Com efeito Bounce + Delays) */
+.bounce-dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.bounce-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #d4af37;
+  border-radius: 50%;
+
+  /* Aplica a animação de pular */
+  animation: bounceAnimation 0.6s infinite alternate;
+}
+
+/* Aqui aplicamos os mesmos delays exatos que vieram do seu Figma/React */
+.dot-1 {
+  animation-delay: 0ms;
+}
+
+.dot-2 {
+  animation-delay: 150ms;
+}
+
+.dot-3 {
+  animation-delay: 300ms;
+}
+
+/* 3. TEXTO INFERIOR */
+.loading-text {
+  color: #52525b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* --- EQUIVALENTE ÀS ANIMAÇÕES DO TAILWIND EM CSS PURO --- */
+
+/* Keyframe do Efeito Pulse (Opacidade variando suavemente) */
+@keyframes pulseAnimation {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Keyframe do Efeito Bounce (Sobe e desce no eixo Y) */
+@keyframes bounceAnimation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px); /* Joga a bolinha para cima */
+  }
+}

@@ -1,0 +1,88 @@
+/* Limpeza Padrão e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
+    padding: 40px 24px;
+}
+
+/* Container de alinhamento para a amostra */
+.component-preview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- ESTILIZAÇÃO DO COMPONENTE PAGEHEADER --- */
+.page-header-box {
+    /* Gradiente sutil dourado partindo da esquerda para o transparente */
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+    /* A marcante borda esquerda dourada de 4px */
+    border-left: 4px solid #D4AF37;
+    padding: 16px 24px;
+    margin-bottom: 24px;
+}
+
+.header-flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Agrupamento do Ícone e Textos */
+.header-left-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Quadrado do Ícone com Gradiente */
+.header-icon-square {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #D4AF37, #B8941F);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.2);
+    flex-shrink: 0;
+}
+
+.icon-emoji {
+    font-size: 20px;
+}
+
+/* Bloco de Textos */
+.header-text-block .header-title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.header-text-block .header-subtitle {
+    color: #52525b;
+    font-size: 14px;
+}
+
+/* O Badge do Lado Direito (Variação Padrão Amber) */
+.header-badge {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.badge-amber-variant {
+    background-color: #fef3c7;
+    color: #b45309;
+    border: 1px solid #fde68a;
+}

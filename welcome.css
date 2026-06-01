@@ -1,0 +1,355 @@
+/* Limpeza Padrão e Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
+  color: #000000;
+}
+
+/* Container de Alinhamento Central */
+.welcome-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.welcome-container {
+  width: 100%;
+  max-width: 1152px; /* Equivalente ao max-w-6xl */
+}
+
+/* --- TOPO / CABEÇALHO --- */
+.welcome-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.logo-box-main {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 24px auto;
+  box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.3);
+}
+
+.system-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 6px;
+}
+
+.company-sub-title {
+  font-size: 18px;
+  color: #52525b;
+  margin-bottom: 16px;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(184, 148, 31, 0.1)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  animation: badgePulse 2s infinite;
+}
+
+.welcome-badge p {
+  font-size: 14px;
+  color: #3f3f46;
+  font-weight: 500;
+}
+
+/* --- GRADE DOS CARDS DE MÓDULOS (2 colunas) --- */
+.modules-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .modules-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.module-card-btn {
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 32px;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Efeito Hover Geral nos Cards */
+.module-card-btn:hover {
+  border-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.12);
+}
+
+/* Reflexo dourado interno suave no hover */
+.module-card-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.04), transparent);
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+.module-card-btn:hover::after {
+  opacity: 1;
+}
+
+.card-inner-flex {
+  display: flex;
+  align-items: start;
+  gap: 24px;
+  position: relative;
+  z-index: 5;
+}
+
+/* Caixas dos Ícones dos Cards */
+.module-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+.module-card-btn:hover .module-icon-box {
+  transform: scale(1.1);
+}
+
+.module-text-block h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+.module-card-btn:hover h3 {
+  color: #b8941f;
+}
+
+.module-text-block p {
+  font-size: 14px;
+  color: #52525b;
+  line-height: 1.5;
+}
+
+/* Badges Dinâmicas de Acesso */
+.access-indicator {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Variações de Cores das Badges e Ícones */
+.bg-blue-grad {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+.badge-blue {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.bg-emerald-grad {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+.badge-emerald {
+  background-color: #f0fdf4;
+  color: #065f46;
+  border: 1px solid #bbf7d0;
+}
+
+.bg-violet-grad {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+.badge-violet {
+  background-color: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.bg-amber-grad {
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+}
+.badge-amber {
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+/* --- PAINEL DE MÉTRICAS INFERIOR --- */
+.info-stats-bar {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+@media (min-width: 768px) {
+  .info-stats-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-block .stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 4px;
+}
+.stat-block .stat-label {
+  font-size: 14px;
+  color: #52525b;
+}
+
+.stat-block.border-x {
+  border-top: 1px solid #f4f4f5;
+  border-bottom: 1px solid #f4f4f5;
+  padding: 16px 0;
+}
+@media (min-width: 768px) {
+  .stat-block.border-x {
+    border: none;
+    border-left: 1px solid #e4e4e7;
+    border-right: 1px solid #e4e4e7;
+    padding: 0;
+  }
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+.text-green {
+  color: #16a34a !important;
+}
+
+/* --- PAINEL GUIA RÁPIDO --- */
+.quick-guide-box {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(184, 148, 31, 0.1)
+  );
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.guide-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-circle-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #d4af37;
+  color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .guide-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.guide-item {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  font-size: 14px;
+  color: #3f3f46;
+}
+
+.guide-item span {
+  color: #b8941f;
+  font-weight: 700;
+}
+
+.footer-copyright-text {
+  text-align: center;
+  font-size: 12px;
+  color: #a1a1aa;
+  margin-top: 32px;
+}
+
+/* Animação do Badge de Pulso */
+@keyframes badgePulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}

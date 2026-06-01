@@ -1,0 +1,298 @@
+/* Limpeza Básica e Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
+}
+
+/* --- BACKDROP (FUNDO ESCURO) --- */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 40;
+}
+
+/* --- GAVETA LATERAL (DRAWER) --- */
+.drawer-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 448px; /* Equivalente ao max-w-md */
+  background-color: #ffffff;
+  border-left: 1px solid #e4e4e7;
+  z-index: 50;
+  box-shadow: -10px 0 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Cabeçalho Interno */
+.drawer-header {
+  padding: 32px;
+  border-bottom: 1px solid #e4e4e7;
+  background: linear-gradient(135deg, #fafafa, #ffffff);
+}
+
+.header-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.brand-icon-box {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 6px -1px rgba(212, 175, 55, 0.2);
+}
+
+.drawer-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+.brand-subtitle {
+  font-size: 14px;
+  color: #52525b;
+}
+
+.system-tag {
+  background-color: #fef3c7;
+  border: 1px solid #fde68a;
+  padding: 10px 14px;
+  border-radius: 12px;
+}
+
+.system-tag p {
+  font-size: 12px;
+  color: #b45309;
+  font-weight: 500;
+}
+
+/* Lista de Botões de Módulos (Rolável) */
+.drawer-menu-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-item-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: #fafafa;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu-item-btn:hover {
+  background-color: #f4f4f5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.item-icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.item-text-box {
+  flex: 1;
+  text-align: left;
+}
+
+.item-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #18181b;
+}
+.item-description {
+  font-size: 12px;
+  color: #71717a;
+  margin-top: 2px;
+}
+
+.shortcut-badge {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #71717a;
+}
+
+/* Estilo do Card quando está Ativo (Selecionado) */
+.menu-item-btn.item-active {
+  background: linear-gradient(90deg, #d4af37, #b8941f);
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.25);
+}
+
+.item-active .item-icon-box {
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+}
+
+.item-active .item-label {
+  color: #000000;
+}
+.item-active .item-description {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.active-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+/* Rodapé Interno */
+.drawer-footer {
+  padding: 24px;
+  border-top: 1px solid #e4e4e7;
+  background-color: #fafafa;
+}
+
+.tip-box {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.tip-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b45309;
+  margin-bottom: 2px;
+}
+.tip-text {
+  font-size: 12px;
+  color: #d97706;
+}
+
+.btn-logout {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3f3f46;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #f4f4f5;
+  border-color: #d4d4d8;
+}
+
+.copyright-text {
+  text-align: center;
+  font-size: 11px;
+  color: #a1a1aa;
+  margin-top: 16px;
+}
+
+/* --- 3. BOTÃO FLUTUANTE DE DISPARO (TRIGGER) --- */
+.floating-menu-container {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 60; /* Fica acima da gaveta e do backdrop */
+}
+
+.btn-floating-trigger {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 25px -5px rgba(212, 175, 55, 0.4);
+  transition: transform 0.2s;
+}
+
+.btn-floating-trigger:hover {
+  transform: scale(1.1);
+}
+
+.icon-trigger {
+  font-size: 22px;
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Balão de Dica (Tooltip) */
+.menu-tooltip {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  /* Ocultamos o balão por padrão já que o menu está aberto na simulação */
+  display: none;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -4px;
+  right: 24px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  transform: rotate(45deg);
+}

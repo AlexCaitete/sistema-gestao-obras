@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência de Cronograma - Gestão de Obras</title>
+    <link rel="stylesheet" href="manager-schedule.css">
+</head>
+<body>
+
+    <header class="schedule-header">
+        <div class="header-main-area">
+            <span class="badge-module">Módulo Planejamento</span>
+            <h2 class="page-title">📅 Inteligência de Cronograma</h2>
+            <p class="page-subtitle">Análise de Caminho Crítico e Curva S</p>
+        </div>
+        <div class="header-actions-area">
+            <div class="time-badge">🕒 Atualizado: Há 5 min</div>
+            <button class="btn-dropdown">📅 Últimas 4 semanas <span class="chevron">▼</span></button>
+        </div>
+    </header>
+
+    <main class="schedule-main">
+
+        <section class="gantt-section">
+            <div class="section-header-row">
+                <div>
+                    <h3>Gráfico de Gantt</h3>
+                    <p class="section-subtitle-text">Visualização de tarefas e dependências</p>
+                </div>
+                <button type="button" class="btn-recalculate">🔄 Recalcular Caminho Crítico</button>
+            </div>
+
+            <div class="gantt-legend">
+                <div class="legend-item"><span class="box-legend bg-critical"></span> Caminho Crítico</div>
+                <div class="legend-item"><span class="box-legend bg-normal"></span> Tarefa Normal</div>
+                <div class="legend-item"><span class="text-icon">⚡</span> Dependência</div>
+            </div>
+
+            <div class="gantt-card-wrapper">
+                <div class="gantt-scrollable">
+                    <div class="gantt-table">
+                        
+                        <div class="gantt-row gantt-header-row">
+                            <div class="col-task-name">Tarefa</div>
+                            <div class="col-weeks-timeline">
+                                <div class="week-cell">S1</div><div class="week-cell">S2</div><div class="week-cell">S3</div><div class="week-cell">S4</div><div class="week-cell">S5</div><div class="week-cell">S6</div><div class="week-cell">S7</div><div class="week-cell">S8</div><div class="week-cell">S9</div><div class="week-cell">S10</div><div class="week-cell">S11</div><div class="week-cell">S12</div><div class="week-cell">S13</div><div class="week-cell">S14</div><div class="week-cell">S15</div><div class="week-cell">S16</div><div class="week-cell">S17</div><div class="week-cell">S18</div><div class="week-cell">S19</div><div class="week-cell">S20</div><div class="week-cell">S21</div><div class="week-cell">S22</div><div class="week-cell">S23</div><div class="week-cell">S24</div><div class="week-cell">S25</div>
+                            </div>
+                            <div class="col-progress-pct">%</div>
+                        </div>
+
+                        <div class="gantt-row">
+                            <div class="col-task-name font-medium">⚡ Fundação</div>
+                            <div class="col-weeks-timeline">
+                                <div class="bar-container grid-25">
+                                    <div class="gantt-bar critical" style="grid-column: 1 / span 4;">
+                                        <div class="bar-progress-fill" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-progress-pct text-emerald">100%</div>
+                        </div>
+
+                        <div class="gantt-row">
+                            <div class="col-task-name font-medium">⚡ Estrutura - Pilares</div>
+                            <div class="col-weeks-timeline">
+                                <div class="bar-container grid-25">
+                                    <div class="gantt-bar critical" style="grid-column: 5 / span 6;">
+                                        <div class="bar-progress-fill" style="width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-progress-pct text-emerald">100%</div>
+                        </div>
+
+                        <div class="gantt-row">
+                            <div class="col-task-name font-medium">⚡ Estrutura - Lajes</div>
+                            <div class="col-weeks-timeline">
+                                <div class="bar-container grid-25">
+                                    <div class="gantt-bar critical" style="grid-column: 7 / span 8;">
+                                        <div class="bar-progress-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-progress-pct text-amber">75%</div>
+                        </div>
+
+                        <div class="gantt-row">
+                            <div class="col-task-name font-medium">Alvenaria</div>
+                            <div class="col-weeks-timeline">
+                                <div class="bar-container grid-25">
+                                    <div class="gantt-bar normal" style="grid-column: 11 / span 6;">
+                                        <div class="bar-progress-fill" style="width: 45%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-progress-pct text-orange">45%</div>
+                        </div>
+
+                        <div class="gantt-row">
+                            <div class="col-task-name font-medium">⚡ Instalações Elétricas</div>
+                            <div class="col-weeks-timeline">
+                                <div class="bar-container grid-25">
+                                    <div class="gantt-bar critical" style="grid-column: 13 / span 5;">
+                                        <div class="bar-progress-fill" style="width: 30%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-progress-pct text-orange">30%</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-kpi-row">
+                <div class="mini-kpi-card">
+                    <p class="mini-kpi-label">Total de Tarefas</p>
+                    <p class="mini-kpi-value">9</p>
+                </div>
+                <div class="mini-kpi-card border-red">
+                    <p class="mini-kpi-label">Tarefas Críticas</p>
+                    <p class="mini-kpi-value text-red">7</p>
+                </div>
+                <div class="mini-kpi-card">
+                    <p class="mini-kpi-label">Duração Total</p>
+                    <p class="mini-kpi-value">25 sem</p>
+                </div>
+                <div class="mini-kpi-card">
+                    <p class="mini-kpi-label">Progresso Médio</p>
+                    <p class="mini-kpi-value text-gold">43%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="s-curve-section">
+            <div class="section-header-row">
+                <div>
+                    <h3>Curva S - Análise de Performance</h3>
+                    <p class="section-subtitle-text">Comparativo entre planejado e executado</p>
+                </div>
+                <div class="deviation-badge">⚠️ Desvio: -8%</div>
+            </div>
+
+            <div class="chart-canvas-placeholder">
+                <div class="mock-chart-graphic">
+                    <div class="mock-line-planejado"><span>Planejado</span></div>
+                    <div class="mock-line-executado"><span>Executado</span></div>
+                </div>
+            </div>
+
+            <div class="s-curve-footer-metrics">
+                <div class="metric-block">
+                    <p class="metric-label">Índice de Performance</p>
+                    <p class="metric-value">📈 0.92 SPI</p>
+                </div>
+                <div class="metric-block border-x">
+                    <p class="metric-label">Previsão de Conclusão</p>
+                    <p class="metric-value">+2 semanas</p>
+                </div>
+                <div class="metric-block">
+                    <p class="metric-label">Ação Recomendada</p>
+                    <p class="metric-value text-danger">Acelerar tarefas críticas</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

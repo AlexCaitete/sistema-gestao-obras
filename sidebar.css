@@ -1,0 +1,124 @@
+/* Limpeza Padrão e Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f5; /* Regra Global: Tom de cinza claro unificado */
+  padding-left: 310px; /* Dá um recuo para a sidebar fixa não cobrir o conteúdo do body */
+}
+
+/* --- ESTILIZAÇÃO DO COMPONENTE SIDEBAR --- */
+.sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 288px; /* Equivalente ao w-72 do Tailwind (72 * 4px = 288px) */
+  background-color: #09090b; /* Tom escuro profundo zinc-950 */
+  border-right: 1px solid #27272a; /* Borda divisória zinc-800 */
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  z-index: 100;
+}
+
+/* Topo da Sidebar (Logo e Títulos) */
+.sidebar-top-section {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #27272a; /* Divisória interna zinc-800 */
+  margin-bottom: 32px;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo-box {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #d4af37, #b8941f);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.2);
+}
+
+.brand-text-block .brand-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.brand-text-block .brand-subtitle {
+  color: #71717a; /* Cor zinc-500 */
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* Lista de Links de Navegação */
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Espaçamento space-y-1.5 */
+}
+
+.nav-sidebar-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #a1a1aa; /* Texto padrão zinc-400 */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efeito Hover nos botões normais */
+.nav-sidebar-btn:hover {
+  background-color: #18181b; /* Cor zinc-900 */
+  color: #ffffff; /* Texto fica branco */
+}
+
+.nav-icon {
+  font-size: 16px;
+}
+
+/* Estado Ativo (Selected) */
+.nav-sidebar-btn.btn-active {
+  background: linear-gradient(90deg, #d4af37, #b8941f);
+  color: #000000; /* Texto do item ativo vira preto */
+  font-weight: 600;
+  box-shadow: 0 10px 15px -3px rgba(212, 175, 55, 0.2);
+}
+
+/* Rodapé Fixo da Sidebar */
+.sidebar-footer {
+  margin-top: auto; /* Empurra o footer pro final da barra */
+  padding-top: 24px;
+  border-top: 1px solid #27272a;
+}
+
+.version-text {
+  font-size: 12px;
+  color: #52525b; /* Cor zinc-600 */
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #3f3f46; /* Cor zinc-700 */
+}
